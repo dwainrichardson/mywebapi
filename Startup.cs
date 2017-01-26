@@ -29,6 +29,7 @@ namespace MyWebAPI
         {
             // Add framework services.
             services.AddMvc();
+           // services.AddSingleton<IContact,Contact>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,7 +39,7 @@ namespace MyWebAPI
             loggerFactory.AddDebug();
 
             app.UseMvc();
-           
+        
             app.UseMvc(routes =>
                         {
                             routes.MapRoute(
